@@ -1,0 +1,266 @@
+{
+  "format": "ambrotype-hub/1",
+  "items": [
+    {
+      "id": "layout-knob-desk",
+      "kind": "layout",
+      "name": "Knob desk",
+      "author": "Ambrotype",
+      "description": "Everything in one right column: white balance and tone as a grid of knobs, presence as bars, then the usual panels.",
+      "license": "CC0-1.0",
+      "path": "looks/layouts/knob-desk.json",
+      "sha256": "9b903c2e9d5033dc8564b3b5ff760e101a6b09bcf806dd04eb6f4d7b829faca4"
+    },
+    {
+      "id": "theme-paper",
+      "kind": "theme",
+      "name": "Paper",
+      "author": "Ambrotype",
+      "description": "A soft off-white theme with ink-blue accents and square corners.",
+      "license": "CC0-1.0",
+      "path": "looks/themes/paper.json",
+      "sha256": "a545583027d86a240a8f2bc3c48ada707fa98f136a95d23df01c9b8bd3b31b89"
+    },
+    {
+      "id": "theme-warm-dark",
+      "kind": "theme",
+      "name": "Warm dark",
+      "author": "Ambrotype",
+      "description": "Dark, with warm browns and an amber accent.",
+      "license": "CC0-1.0",
+      "path": "looks/themes/warm-dark.json",
+      "sha256": "f5fdb5d52e05313b3aacaad18b09e792d78391ddd63be5a5d74e93c5c9b058a0"
+    },
+    {
+      "id": "preset-airy",
+      "kind": "preset",
+      "name": "Airy",
+      "group": "Bright & airy",
+      "author": "Ambrotype",
+      "description": "Light and clean: lifted shadows, cool whites.",
+      "license": "CC0-1.0",
+      "path": "presets/airy.xmp",
+      "sha256": "83e84ce9b3d270df712be2d1b5f8674aeef7b7d0496beb1eeedf0b481324ded6"
+    },
+    {
+      "id": "preset-bw-classic",
+      "kind": "preset",
+      "name": "B&W Classic",
+      "group": "Black & white",
+      "author": "Ambrotype",
+      "description": "Balanced black and white with good tonal range.",
+      "license": "CC0-1.0",
+      "path": "presets/bw-classic.xmp",
+      "sha256": "3e8dbbddaa98dc9040ec9e3954411f7b3b9d0db047e11cf799ce1e940ce1d5f4"
+    },
+    {
+      "id": "preset-bw-high-contrast",
+      "kind": "preset",
+      "name": "B&W Punch",
+      "group": "Black & white",
+      "author": "Ambrotype",
+      "description": "Deep blacks and bright whites, darkened skies.",
+      "license": "CC0-1.0",
+      "path": "presets/bw-high-contrast.xmp",
+      "sha256": "fc928a4b46d69204ba546dbf6c9ce9998fbd6072fba3c6da61d0fb6e1867daff"
+    },
+    {
+      "id": "preset-bw-sepia",
+      "kind": "preset",
+      "name": "Sepia",
+      "group": "Black & white",
+      "author": "Ambrotype",
+      "description": "Warm-toned black and white.",
+      "license": "CC0-1.0",
+      "path": "presets/bw-sepia.xmp",
+      "sha256": "2b7817dfe1662eb7205d93bbae72c5e74a951554f1af59c0538f12be8749be33"
+    },
+    {
+      "id": "preset-bw-soft",
+      "kind": "preset",
+      "name": "B&W Soft",
+      "group": "Black & white",
+      "author": "Ambrotype",
+      "description": "Gentle, matte black and white with grain.",
+      "license": "CC0-1.0",
+      "path": "presets/bw-soft.xmp",
+      "sha256": "498b3f9bee6cbf6a7fc86eadd270a59e8d5fc195c5900a15934e62ddd15a99fa"
+    },
+    {
+      "id": "preset-clean-white",
+      "kind": "preset",
+      "name": "Clean White",
+      "group": "Bright & airy",
+      "author": "Ambrotype",
+      "description": "Neutral and crisp, for products and interiors.",
+      "license": "CC0-1.0",
+      "path": "presets/clean-white.xmp",
+      "sha256": "ba62de20de1e9741d07b71b127e16e671a7e5b1f6dc952128e0eb564b8eaeed0"
+    },
+    {
+      "id": "preset-cloud",
+      "kind": "preset",
+      "name": "Cloud",
+      "group": "Bright & airy",
+      "author": "Ambrotype",
+      "description": "Soft pastels with low contrast.",
+      "license": "CC0-1.0",
+      "path": "presets/cloud.xmp",
+      "sha256": "d1e6def56fb272febdc7e77a871567c7d8f29b0b9be967996d1a5f5115ef5d4c"
+    },
+    {
+      "id": "preset-cool-film",
+      "kind": "preset",
+      "name": "Cool Film",
+      "group": "Film",
+      "author": "Ambrotype",
+      "description": "Cool slide-film look with deep blues.",
+      "license": "CC0-1.0",
+      "path": "presets/cool-film.xmp",
+      "sha256": "0690f11c475a4218e2435e1e5f560161c17ff6c328f85b5de331ba33bc0aebb9"
+    },
+    {
+      "id": "preset-dark-city",
+      "kind": "preset",
+      "name": "Dark City",
+      "group": "Moody",
+      "author": "Ambrotype",
+      "description": "Urban and cool: crushed shadows, teal and orange.",
+      "license": "CC0-1.0",
+      "path": "presets/dark-city.xmp",
+      "sha256": "3bcf58c9b5cee686bfa715cc030a7f4464552dd12a8ab9cd13d326c27d3a83c6"
+    },
+    {
+      "id": "preset-faded-print",
+      "kind": "preset",
+      "name": "Faded Print",
+      "group": "Film",
+      "author": "Ambrotype",
+      "description": "Like an old print: lifted blacks, muted colour, warm cast.",
+      "license": "CC0-1.0",
+      "path": "presets/faded-print.xmp",
+      "sha256": "df97a77a0b4f5b0e775e834d5cd3441f73502f33ff4926a728b10045a485e90e"
+    },
+    {
+      "id": "preset-golden-hour",
+      "kind": "preset",
+      "name": "Golden Hour",
+      "group": "Warm & soft",
+      "author": "Ambrotype",
+      "description": "Warm highlights, soft contrast, glowing skin.",
+      "license": "CC0-1.0",
+      "path": "presets/golden-hour.xmp",
+      "sha256": "73d67b04766d9e4bba08117b19ee807a81b17d386f8df2ebe69138fb28d1277f"
+    },
+    {
+      "id": "preset-honey",
+      "kind": "preset",
+      "name": "Honey",
+      "group": "Warm & soft",
+      "author": "Ambrotype",
+      "description": "Amber midtones and gentle fade.",
+      "license": "CC0-1.0",
+      "path": "presets/honey.xmp",
+      "sha256": "e4c5e37f7077d620c0f82d860ff6e439614b0a5594fae3ca51140e3270ca426c"
+    },
+    {
+      "id": "preset-landscape-clarity",
+      "kind": "preset",
+      "name": "Landscape Detail",
+      "group": "Landscape",
+      "author": "Ambrotype",
+      "description": "More depth and detail for scenery.",
+      "license": "CC0-1.0",
+      "path": "presets/landscape-clarity.xmp",
+      "sha256": "99887e3f071eef3fe29405bcf3ff0162ebfeca834441adf6fee1a50cdbf5e22b"
+    },
+    {
+      "id": "preset-moody-forest",
+      "kind": "preset",
+      "name": "Moody Forest",
+      "group": "Moody",
+      "author": "Ambrotype",
+      "description": "Dark, desaturated greens and teal shadows.",
+      "license": "CC0-1.0",
+      "path": "presets/moody-forest.xmp",
+      "sha256": "faf71f7c8b81f3734385318a23e37e566db287a331b461b0dcdebb99e6476e46"
+    },
+    {
+      "id": "preset-night-lights",
+      "kind": "preset",
+      "name": "Night Lights",
+      "group": "Landscape",
+      "author": "Ambrotype",
+      "description": "Clean night shots: cool shadows, glowing lights, less noise.",
+      "license": "CC0-1.0",
+      "path": "presets/night-lights.xmp",
+      "sha256": "1505583d163f0a76fcd62e32586e81ae08473d944ef326b58004f6db0443530c"
+    },
+    {
+      "id": "preset-peach",
+      "kind": "preset",
+      "name": "Peach",
+      "group": "Warm & soft",
+      "author": "Ambrotype",
+      "description": "Pastel warmth for portraits.",
+      "license": "CC0-1.0",
+      "path": "presets/peach.xmp",
+      "sha256": "e2bd08f013d0e514b265e058f3755da116e3655ff6408f03b205c633a8a48e88"
+    },
+    {
+      "id": "preset-soft-portrait",
+      "kind": "preset",
+      "name": "Soft Portrait",
+      "group": "Portrait",
+      "author": "Ambrotype",
+      "description": "Flattering skin: softer texture, warm and bright.",
+      "license": "CC0-1.0",
+      "path": "presets/soft-portrait.xmp",
+      "sha256": "c1181806ea2f0f3248df86181cab0443a98bee0f170bc0d5938e5c3f4bd0d5bd"
+    },
+    {
+      "id": "preset-stormy",
+      "kind": "preset",
+      "name": "Stormy",
+      "group": "Moody",
+      "author": "Ambrotype",
+      "description": "Heavy skies and muted colour.",
+      "license": "CC0-1.0",
+      "path": "presets/stormy.xmp",
+      "sha256": "7cb2acb39b84e7d78b68cc0c6c934777c7ff0ab7e7163130cb1af290b46a64cd"
+    },
+    {
+      "id": "preset-teal-orange",
+      "kind": "preset",
+      "name": "Teal & Orange",
+      "group": "Vivid",
+      "author": "Ambrotype",
+      "description": "The classic cinematic split: teal shadows, warm skin.",
+      "license": "CC0-1.0",
+      "path": "presets/teal-orange.xmp",
+      "sha256": "5c9efddbc90a1d4476ea0ebba00b52a903838028bbd5a34ba40839691ca53a6f"
+    },
+    {
+      "id": "preset-vivid-travel",
+      "kind": "preset",
+      "name": "Vivid Travel",
+      "group": "Vivid",
+      "author": "Ambrotype",
+      "description": "Punchy colour and clear skies for travel shots.",
+      "license": "CC0-1.0",
+      "path": "presets/vivid-travel.xmp",
+      "sha256": "72536ae8e17e1847ae18fbc3e9378e271e5021c97eb860c85788e86b5dcba76b"
+    },
+    {
+      "id": "preset-warm-film",
+      "kind": "preset",
+      "name": "Warm Film",
+      "group": "Film",
+      "author": "Ambrotype",
+      "description": "Warm negative-film feel: soft greens, creamy skin, fine grain.",
+      "license": "CC0-1.0",
+      "path": "presets/warm-film.xmp",
+      "sha256": "6be9e3cc86706b0de9101939db12f98f030dd49d159b26ad1c237947d44a848b"
+    }
+  ]
+}
