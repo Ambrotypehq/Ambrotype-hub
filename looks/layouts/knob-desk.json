@@ -4,7 +4,7 @@
   "description": "Everything in one right column: white balance and tone as a grid of knobs, presence as bars, then the usual panels.",
   "author": "Ambrotype",
   "density": "compact",
-  "toolbar": ["open", "save", "export", "|", "undo", "redo", "|", "before", "crop", "zoom", "wb", "clip", "|", "looks", "settings"],
+  "toolbar": ["open", "save", "export", "|", "undo", "redo", "|", "before", "crop", "zoom", "wb", "clip", "|", "hub", "looks", "settings"],
   "left": { "width": 0, "items": [] },
   "right": {
     "width": 340,

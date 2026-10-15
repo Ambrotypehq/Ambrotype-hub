@@ -1,6 +1,6 @@
 # Ambrotype hub
 
-Shared layouts, themes, presets, collage templates, size profiles and plugins for [Ambrotype](https://github.com/shardpelt/Ambrotype). Layouts and colour themes are called "looks" here (they live in `looks/`). Ambrotype's **Appearance → Browse hub…** lists the looks and plugins here and installs them with one click.
+Shared layouts, themes, presets, collage templates, size profiles and plugins for [Ambrotype](https://github.com/shardpelt/Ambrotype). Layouts and colour themes are called "looks" here (they live in `looks/`). Ambrotype's **Browse** button (also **Appearance → Browse hub…**) lists the looks and plugins here and installs them with one click. You can also skip the hub: keep a look in your own GitHub repo (`theme.json` or `layout.json` at its top) and people paste the repo's link into the Browse dialog.
 
 Like [Omarchy](https://learn.omacom.io/2/the-omarchy-manual/90/extra-themes)'s themes, there is no server: the hub is this repo. Each look is one small JSON file, and `index.json` lists them with a checksum. Looks contain no code, so they're safe to install. The app checks each file's checksum and validates it before saving it.
 
