@@ -1,8 +1,12 @@
 # Ambrotype hub
 
-Shared layouts, themes and plugins for [Ambrotype](https://github.com/shardpelt/Ambrotype). Layouts and colour themes are called "looks" here (they live in `looks/`). Ambrotype's **Appearance → Browse hub…** lists the looks and plugins here and installs them with one click.
+Shared layouts, themes, presets, collage templates, size profiles and plugins for [Ambrotype](https://github.com/shardpelt/Ambrotype). Layouts and colour themes are called "looks" here (they live in `looks/`). Ambrotype's **Appearance → Browse hub…** lists the looks and plugins here and installs them with one click.
 
 Like [Omarchy](https://learn.omacom.io/2/the-omarchy-manual/90/extra-themes)'s themes, there is no server: the hub is this repo. Each look is one small JSON file, and `index.json` lists them with a checksum. Looks contain no code, so they're safe to install. The app checks each file's checksum and validates it before saving it.
+
+## The app's built-in looks and presets
+
+Ambrotype's own layouts (Classic, Compact, …), themes (Dark, Light, …) and starter presets live here too. The app ships a copy of them, so it works offline: its `crates/amb-gui/data/hub/bundle.txt` lists which items, and `tools/sync-hub.py` in the app repo copies them from a checkout of this repo. To change one, change it here first, then sync the app. A built-in layout must only use toolbar buttons and panels the app already has.
 
 ## Add your look
 
@@ -24,7 +28,7 @@ If you skip step 4, a maintainer can run it before merging.
 
 ## Presets
 
-Develop presets go in `presets/<name>.xmp` (lower case and dashes), in Lightroom's XMP preset format: export one from Lightroom, or use Ambrotype's **Presets → Save…** and take the file from the presets folder. The app lists them under **Browse hub… → Presets**, shows what each changes, and installs it into the presets list (group "Hub"). They also make up the **Preset library** (Presets → Preset library…), grouped by their `crs:Group` (give each a `Name`, a `Group` and a one-line `Description`). The ones here when the app is built ship inside it, so the library works before this repo is published or without a connection.
+Develop presets go in `presets/<name>.xmp` (lower case and dashes), in Lightroom's XMP preset format: export one from Lightroom, or use Ambrotype's **Presets → Save…** and take the file from the presets folder. The app lists them under **Browse hub… → Presets**, shows what each changes, and installs it into the presets list (group "Hub"). They also make up the **Preset library** (Presets → Preset library…), grouped by their `crs:Group` (give each a `Name`, a `Group` and a one-line `Description`).
 
 - Share only presets you made. Bought or downloaded packs belong to their makers.
 - Add `crs:Author`, `crs:Description` and a `crs:License` if you like; presets are CC0 otherwise.
