@@ -4,9 +4,17 @@ Shared layouts, themes, presets, collage templates, size profiles and plugins fo
 
 Like [Omarchy](https://learn.omacom.io/2/the-omarchy-manual/90/extra-themes)'s themes, there is no server: the hub is this repo. Each look is one small JSON file, and `index.json` lists them with a checksum. Looks contain no code, so they're safe to install. The app checks each file's checksum and validates it before saving it.
 
+**New to this?** [Make it yours](https://github.com/shardpelt/Ambrotype/blob/main/docs/make-it-yours.md) walks through picking a look, changing a layout, making a theme from three colours, sharing it, and running a hub of your own. The file format is in [ui-layouts.md](https://github.com/shardpelt/Ambrotype/blob/main/docs/ai/ui-layouts.md).
+
 ## The app's built-in looks and presets
 
 Ambrotype's own layouts (Classic, Compact, …), themes (Dark, Light, …) and starter presets live here too. The app ships a copy of them, so it works offline: its `crates/amb-gui/data/hub/bundle.txt` lists which items, and `tools/sync-hub.py` in the app repo copies them from a checkout of this repo. To change one, change it here first, then sync the app. A built-in layout must only use toolbar buttons and panels the app already has.
+
+## A good layout
+
+- **One task, done well.** Show what the task needs, at the size it needs. Anything else is a Ctrl (⌘)+K search away, and every command is in the menu bar.
+- **Organising stays in the Library.** The built-in editing layouts leave out Rating & keywords (the keys 1–5, 6–9, P, X and U still work while editing); the Library shows them for the selection. Film lab and Collage prep keep them, as sorting is part of those tasks.
+- **Give it a clear name and a one-line description** that says what it's for ("Colour grading: the wheels large, the rest folded").
 
 ## Add your look
 
@@ -51,7 +59,7 @@ Plugins are small programs that make edits (Ambrotype's **Plugins** button). The
 - **Send one in:** in the Plugins dialog, pick your plugin and press **Share as pull request…**. It shows the files first, then sends them with the GitHub CLI (your own login) or opens GitHub's upload page in your browser.
 - **Where they go:** `plugins/<id>/`, with `plugin.json`, the built `plugin.wasm`, and the Rust source (`Cargo.toml`, `src/`). No source, no merge: reviewers read the code and rebuild the module. Say the plugin's licence in its `Cargo.toml` (`license = "..."`), any open-source licence works.
 - **Reviewing:** read the source and the permissions it asks for, then `amb plugin build plugins/<id>` (the module should come out the same, or replace it with yours) and `amb plugin check plugins/<id>`.
-- **Installing:** **Appearance → Browse hub… → Plugins** lists them, with what each asks to see, and installs one with a click. The app checks the manifest and the module against `index.json` (run `python3 tools/build_index.py` after merging a plugin), and the plugin asks for its permissions the first time it runs.
+- **Installing:** **Browse** in the toolbar (or the Plugins dialog's **Browse hub…**) lists them, with what each asks to see, and installs one with a click. The app checks the manifest and the module against `index.json` (run `python3 tools/build_index.py` after merging a plugin), and the plugin asks for its permissions the first time it runs.
 
 ## For maintainers
 
