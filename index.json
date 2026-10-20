@@ -501,6 +501,21 @@
       "license": "CC0-1.0",
       "path": "presets/warm-film.xmp",
       "sha256": "6be9e3cc86706b0de9101939db12f98f030dd49d159b26ad1c237947d44a848b"
+    },
+    {
+      "id": "interface-minimal",
+      "kind": "interface",
+      "name": "Minimal",
+      "author": "The Ambrotype contributors",
+      "description": "A one-column editor: open a photo, a few sliders, undo, save. A starting point for your own interface.",
+      "license": "GPL-3.0-or-later",
+      "path": "interfaces/minimal/interface.json",
+      "sha256": "905d1c0ae77cc82ae8875195635fe958cc235d645ea0e9b53986b77144f78bcc",
+      "files": {
+        "app.js": "0207c29866f3965717e8fb24ac960a0d05accf34e02f9d423e841018a449f5b3",
+        "index.html": "6cd8de27fb9f91d54eded713eaaf8775773eb876e8b99e3001bfd554fa43a7f4",
+        "style.css": "8059d729fc521ffc6c39b01049643bf14459f68d25a34e8b64404ec1d7cbc178"
+      }
     }
   ]
 }
