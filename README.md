@@ -1,6 +1,6 @@
 # Ambrotype hub
 
-Shared layouts, themes, presets, collage templates, size profiles and plugins for [Ambrotype](https://github.com/shardpelt/Ambrotype). Layouts and colour themes are called "looks" here (they live in `looks/`). Ambrotype's **Browse** button (also **Appearance → Browse hub…**) lists the looks and plugins here and installs them with one click. You can also skip the hub: keep a look in your own GitHub repo (`theme.json` or `layout.json` at its top) and people paste the repo's link into the Browse dialog.
+Shared layouts, themes, presets, collage templates, size profiles, plugins and custom interfaces for [Ambrotype](https://github.com/shardpelt/Ambrotype). Layouts and colour themes are called "looks" here (they live in `looks/`). Ambrotype's **Browse** button (also **Appearance → Browse hub…**) lists the looks and plugins here and installs them with one click. You can also skip the hub: keep a look in your own GitHub repo (`theme.json` or `layout.json` at its top) and people paste the repo's link into the Browse dialog.
 
 Like [Omarchy](https://learn.omacom.io/2/the-omarchy-manual/90/extra-themes)'s themes, there is no server: the hub is this repo. Each look is one small JSON file, and `index.json` lists them with a checksum. Looks contain no code, so they're safe to install. The app checks each file's checksum and validates it before saving it.
 
@@ -61,8 +61,17 @@ Plugins are small programs that make edits (Ambrotype's **Plugins** button). The
 - **Reviewing:** read the source and the permissions it asks for, then `amb plugin build plugins/<id>` (the module should come out the same, or replace it with yours) and `amb plugin check plugins/<id>`.
 - **Installing:** **Browse** in the toolbar (or the Plugins dialog's **Browse hub…**) lists them, with what each asks to see, and installs one with a click. The app checks the manifest and the module against `index.json` (run `python3 tools/build_index.py` after merging a plugin), and the plugin asks for its permissions the first time it runs.
 
+## Interfaces
+
+A custom interface replaces Ambrotype's whole window with someone's own HTML, CSS and JavaScript: a one-slider app, a big-button touch editor, a culling screen. How to make one (by hand or with an AI agent): [custom-interface.md](https://github.com/shardpelt/Ambrotype/blob/main/docs/ai/custom-interface.md).
+
+- **Send one in:** in **Settings → General → Interface**, choose yours and press **Share…**. It lists the files first, then sends them with the GitHub CLI (your own login) or opens GitHub's upload page in your browser. By hand: add the folder as `interfaces/<id>/` and open a pull request.
+- **What it holds:** `index.html`, an `interface.json` with a `"name"` (and `"description"`, `"author"`, `"license"`), and the files it loads. Only web files (pages, scripts, styles, pictures, fonts), at most 200 files and 20 MB. Nothing loaded from the internet. It needs a way back to the built-in interface.
+- **Reviewing:** an interface is code with the app's full reach (unlike a plugin, it isn't sandboxed). Read every script before merging. Refuse anything that loads code or data from the internet, or touches files it has no reason to.
+- **Installing:** **Browse → Interfaces** lists them with their files, warns that it's code, and installs one into the app's `interfaces/` folder. Every file is checked against `index.json`. **Use now**, or Settings → General → Interface, switches to it.
+
 ## For maintainers
 
-- CI (`.github/workflows/check.yml`) fails when a file isn't valid JSON, is in the wrong folder, or `index.json` is out of date, and when a plugin folder lacks its manifest, module or source.
+- CI (`.github/workflows/check.yml`) fails when a file isn't valid JSON, is in the wrong folder, or `index.json` is out of date, when a plugin folder lacks its manifest, module or source, and when an interface lacks its `index.html` or `interface.json`, or holds a file that isn't a web file.
 - Before merging, run `ambrotype --check-look` on new files, and try them in the app.
 - The app reads `index.json` from `https://raw.githubusercontent.com/<owner>/<repo>/main/index.json`. Ambrotype's default points at `Ambrotypehq/ambrotype-hub`. Anyone can point their app at another hub in **Settings → General**.

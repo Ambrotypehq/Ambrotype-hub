@@ -5,5 +5,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Every look is valid JSON in the right folder, and index.json is current
+      - name: Every item is valid and in the right folder, and index.json is current
         run: python3 tools/build_index.py --check

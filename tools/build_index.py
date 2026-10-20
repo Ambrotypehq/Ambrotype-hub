@@ -18,6 +18,12 @@ the sha256 of plugin.json and of its module, and the app checks both. Each
 needs a plugin.json whose id is its folder name, its plugin.wasm, and its
 Rust source, so a reviewer can read the code and rebuild the module: `amb
 plugin build plugins/<id>`, then `amb plugin check plugins/<id>`.
+
+Custom interfaces (interfaces/<id>/: a whole other front end, see the app's
+docs/ai/custom-interface.md) are listed as "interface-<id>": the sha256 of
+interface.json and of every other file. Each needs an index.html and an
+interface.json with a "name", and holds only web files (pages, scripts,
+styles, pictures, fonts): at most 200 files and 20 MB.
 """
 import hashlib
 import html
@@ -66,8 +72,10 @@ def build():
             })
     preset_items, preset_problems = check_presets()
     plugin_items, plugin_problems = check_plugins()
-    items += preset_items + plugin_items
-    return {"format": "ambrotype-hub/1", "items": items}, problems + preset_problems + plugin_problems
+    interface_items, interface_problems = check_interfaces()
+    items += preset_items + plugin_items + interface_items
+    problems += preset_problems + plugin_problems + interface_problems
+    return {"format": "ambrotype-hub/1", "items": items}, problems
 
 
 def xmp_text(raw, name):
@@ -135,6 +143,69 @@ def check_plugins():
             "path": f"{rel}/plugin.json",
             "sha256": hashlib.sha256((folder / "plugin.json").read_bytes()).hexdigest(),
             "files": {wasm: hashlib.sha256((folder / wasm).read_bytes()).hexdigest()},
+        })
+    return items, problems
+
+
+# What an interface may be made of (the app refuses anything else).
+INTERFACE_EXTENSIONS = {"html", "htm", "js", "mjs", "css", "json", "svg", "png", "jpg", "jpeg", "webp", "gif",
+                        "ico", "woff2", "woff", "ttf", "wasm", "md", "txt"}
+MAX_INTERFACE_FILES = 200
+MAX_INTERFACE_BYTES = 20 << 20
+MAX_INTERFACE_FILE_BYTES = 5 << 20
+
+
+def check_interfaces():
+    items, problems = [], []
+    for folder in sorted(p for p in (ROOT / "interfaces").glob("*") if p.is_dir()):
+        rel = folder.relative_to(ROOT).as_posix()
+        if not re.fullmatch(r"[a-z0-9][a-z0-9-]{0,62}", folder.name):
+            problems.append(f"{rel}: use a lower-case folder name with dashes (e.g. big-buttons)")
+            continue
+        try:
+            data = json.loads((folder / "interface.json").read_bytes())
+        except (OSError, json.JSONDecodeError) as e:
+            problems.append(f"{rel}: needs a valid interface.json ({e})")
+            continue
+        found = []
+        if not str(data.get("name", "")).strip():
+            found.append(f'{rel}/interface.json: needs a "name"')
+        if not (folder / "index.html").is_file():
+            found.append(f"{rel}: index.html is missing")
+        files, total = {}, 0
+        for path in sorted(p for p in folder.rglob("*") if p.is_file()):
+            name = path.relative_to(folder).as_posix()
+            if name == "interface.json":
+                continue
+            parts = name.split("/")
+            ext = name.rsplit(".", 1)[-1].lower() if "." in parts[-1] else ""
+            if any(p.startswith(".") or not re.fullmatch(r"[A-Za-z0-9._ -]+", p) for p in parts):
+                found.append(f"{rel}/{name}: use plain file names (letters, digits, dashes, dots), no hidden files")
+            elif ext not in INTERFACE_EXTENSIONS:
+                found.append(f"{rel}/{name}: not a kind of file an interface is made of")
+            elif path.stat().st_size > MAX_INTERFACE_FILE_BYTES:
+                found.append(f"{rel}/{name}: bigger than 5 MB")
+            else:
+                raw = path.read_bytes()
+                total += len(raw)
+                files[name] = hashlib.sha256(raw).hexdigest()
+        if len(files) > MAX_INTERFACE_FILES:
+            found.append(f"{rel}: more than {MAX_INTERFACE_FILES} files")
+        if total > MAX_INTERFACE_BYTES:
+            found.append(f"{rel}: bigger than 20 MB in all")
+        problems += found
+        if found:
+            continue
+        items.append({
+            "id": f"interface-{folder.name}",
+            "kind": "interface",
+            "name": data["name"],
+            "author": data.get("author", ""),
+            "description": data.get("description", ""),
+            "license": data.get("license", ""),
+            "path": f"{rel}/interface.json",
+            "sha256": hashlib.sha256((folder / "interface.json").read_bytes()).hexdigest(),
+            "files": files,
         })
     return items, problems
 
