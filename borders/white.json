@@ -1,0 +1,9 @@
+{
+  "format": "ambrotype-border/1",
+  "name": "White",
+  "author": "Ambrotype",
+  "description": "An even white border, 5% of the short edge.",
+  "license": "CC0-1.0",
+  "width": 5,
+  "color": "#ffffff"
+}

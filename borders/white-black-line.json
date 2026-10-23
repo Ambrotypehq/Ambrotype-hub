@@ -1,0 +1,13 @@
+{
+  "format": "ambrotype-border/1",
+  "name": "White, black line",
+  "author": "Ambrotype",
+  "description": "A white border with a thin black line around the photo.",
+  "license": "CC0-1.0",
+  "width": 5,
+  "color": "#ffffff",
+  "keyline": {
+    "width": 0.3,
+    "color": "#000000"
+  }
+}

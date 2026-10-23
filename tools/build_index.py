@@ -5,8 +5,8 @@ and check the plugins sent in under plugins/.
     python3 tools/build_index.py          # write index.json
     python3 tools/build_index.py --check  # exit 1 if index.json is out of date (CI)
 
-Each file becomes one item (looks/, collages/ for collage templates and
-sizes/ for size profiles). Its id is the file name, and the app checks the
+Each file becomes one item (looks/, collages/ for collage templates,
+sizes/ for size profiles and borders/ for border presets). Its id is the file name, and the app checks the
 file's sha256 against the index before installing it. Validate the looks
 themselves with the Ambrotype app: `ambrotype --check-look looks/*/*.json`.
 
@@ -35,7 +35,8 @@ import sys
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 KINDS = {"layouts": ("layout", "ambrotype-layout/1"), "themes": ("theme", "ambrotype-theme/1")}
 # Other data files, each in its own top-level folder.
-DATA = {"collages": ("collage", "ambrotype-collage/1"), "sizes": ("sizes", "ambrotype-sizes/1")}
+DATA = {"collages": ("collage", "ambrotype-collage/1"), "sizes": ("sizes", "ambrotype-sizes/1"),
+        "borders": ("border", "ambrotype-border/1")}
 
 
 def build():

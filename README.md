@@ -1,6 +1,6 @@
 # Ambrotype hub
 
-Shared layouts, themes, presets, collage templates, size profiles, plugins and custom interfaces for [Ambrotype](https://github.com/shardpelt/Ambrotype). Layouts and colour themes are called "looks" here (they live in `looks/`). Ambrotype's **Browse** button (also **Appearance → Browse hub…**) lists the looks and plugins here and installs them with one click. You can also skip the hub: keep a look in your own GitHub repo (`theme.json` or `layout.json` at its top) and people paste the repo's link into the Browse dialog.
+Shared layouts, themes, presets, collage templates, size profiles, borders, plugins and custom interfaces for [Ambrotype](https://github.com/shardpelt/Ambrotype). Layouts and colour themes are called "looks" here (they live in `looks/`). Ambrotype's **Browse** button (also **Appearance → Browse hub…**) lists the looks and plugins here and installs them with one click. You can also skip the hub: keep a look in your own GitHub repo (`theme.json` or `layout.json` at its top) and people paste the repo's link into the Browse dialog.
 
 Like [Omarchy](https://learn.omacom.io/2/the-omarchy-manual/90/extra-themes)'s themes, there is no server: the hub is this repo. Each look is one small JSON file, and `index.json` lists them with a checksum. Looks contain no code, so they're safe to install. The app checks each file's checksum and validates it before saving it.
 
@@ -42,9 +42,10 @@ Develop presets go in `presets/<name>.xmp` (lower case and dashes), in Lightroom
 - Add `crs:Author`, `crs:Description` and a `crs:License` if you like; presets are CC0 otherwise.
 - Run `python3 tools/build_index.py` to list it in `index.json`.
 
-## Collage templates and size profiles
+## Collage templates, size profiles and borders
 
 - **Collage templates** go in `collages/<name>.json`: the file the collage maker's **Share…** saves (`"format": "ambrotype-collage/1"`). Installed ones join the templates in the collage maker.
+- **Borders** go in `borders/<name>.json`: the file the export dialog's border **Share…** saves (`"format": "ambrotype-border/1"`). Installed ones join the border presets.
 - **Size profiles** go in `sizes/<name>.json`: a named set of sizes, installed as size presets for the crop tool and the export dialog:
 
   ```json

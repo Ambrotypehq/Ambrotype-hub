@@ -272,6 +272,36 @@
       "sha256": "f5fdb5d52e05313b3aacaad18b09e792d78391ddd63be5a5d74e93c5c9b058a0"
     },
     {
+      "id": "border-polaroid",
+      "kind": "border",
+      "name": "Polaroid",
+      "author": "Ambrotype",
+      "description": "An off-white instant-photo frame, deep at the bottom for a caption.",
+      "license": "CC0-1.0",
+      "path": "borders/polaroid.json",
+      "sha256": "a263d93294db6f2caa4efbfdbb00999d4d68074251e32446487aee97efcb69b1"
+    },
+    {
+      "id": "border-white-black-line",
+      "kind": "border",
+      "name": "White, black line",
+      "author": "Ambrotype",
+      "description": "A white border with a thin black line around the photo.",
+      "license": "CC0-1.0",
+      "path": "borders/white-black-line.json",
+      "sha256": "961b3b0f3c5a1f1da880282dceb46e13ade8d6dd3e6d540e1cde55b764c0d0dd"
+    },
+    {
+      "id": "border-white",
+      "kind": "border",
+      "name": "White",
+      "author": "Ambrotype",
+      "description": "An even white border, 5% of the short edge.",
+      "license": "CC0-1.0",
+      "path": "borders/white.json",
+      "sha256": "4ccefbef71716e8323404e7caaf3734380854e20f8fbffd0fee77e9e149e9e5b"
+    },
+    {
       "id": "preset-airy",
       "kind": "preset",
       "name": "Airy",

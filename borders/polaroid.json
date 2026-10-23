@@ -1,0 +1,10 @@
+{
+  "format": "ambrotype-border/1",
+  "name": "Polaroid",
+  "author": "Ambrotype",
+  "description": "An off-white instant-photo frame, deep at the bottom for a caption.",
+  "license": "CC0-1.0",
+  "width": 5,
+  "bottom": 18,
+  "color": "#f7f5f0"
+}
