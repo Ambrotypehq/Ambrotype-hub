@@ -122,6 +122,16 @@
       "sha256": "76161ba1059998cb974cdade6e57574037a98220784775d5a4173cbcd5ee11da"
     },
     {
+      "id": "layout-minimalism",
+      "kind": "layout",
+      "name": "Minimalism",
+      "author": "Ambrotype",
+      "description": "Only the photo, edge to edge: no menus, toolbar, status bar or filmstrip. Shortcuts all work. The panels slide in over the photo while the pointer is at the window's left or right edge (or with Ctrl+[ and Ctrl+]); the toolbar while it's at the top.",
+      "license": "CC0-1.0",
+      "path": "looks/layouts/minimalism.json",
+      "sha256": "9fc03f66a573b85003012ced960f861e1732fe1ed45b5c3f3acf61992b4977eb"
+    },
+    {
       "id": "layout-retouch",
       "kind": "layout",
       "name": "Retouch",
@@ -210,6 +220,16 @@
       "license": "CC0-1.0",
       "path": "looks/themes/light.json",
       "sha256": "1b614883720ed3e08b27518145348333e9cfdaddd373ae1622982c6294975de1"
+    },
+    {
+      "id": "theme-minimalism",
+      "kind": "theme",
+      "name": "Minimalism",
+      "author": "Ambrotype",
+      "description": "Near-black around the photo so nothing competes with it; quiet greys and an off-white accent, no colour of its own.",
+      "license": "CC0-1.0",
+      "path": "looks/themes/minimalism.json",
+      "sha256": "a7c1af09e65c28daf19fbc540b61f1aa46022a2788001f0e7e23450d06876919"
     },
     {
       "id": "theme-neutral-grey",
