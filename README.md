@@ -74,5 +74,6 @@ A custom interface replaces Ambrotype's whole window with someone's own HTML, CS
 ## For maintainers
 
 - CI (`.github/workflows/check.yml`) fails when a file isn't valid JSON, is in the wrong folder, or `index.json` is out of date, when a plugin folder lacks its manifest, module or source, and when an interface lacks its `index.html` or `interface.json`, or holds a file that isn't a web file.
-- Before merging, run `ambrotype --check-look` on new files, and try them in the app.
+- CI's second job builds the app and installs every item as the app does (`ambrotype --check-hub .`): checksums, each kind's own checks (a theme's colours, a layout's panels, a collage's cells, a border, a size profile, a preset), a plugin's manifest and module, an interface's files. Run it yourself before sending.
+- Before merging, try new items in the app.
 - The app reads `index.json` from `https://raw.githubusercontent.com/<owner>/<repo>/main/index.json`. Ambrotype's default points at `Ambrotypehq/ambrotype-hub`. Anyone can point their app at another hub in **Settings → General**.
