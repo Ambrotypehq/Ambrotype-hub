@@ -152,6 +152,16 @@
       "sha256": "a0bdf4db35d47a2c8991eaa6be208346b59cf1354ddd22e4fc2690f883926856"
     },
     {
+      "id": "layout-trippy",
+      "kind": "layout",
+      "name": "Trippy",
+      "author": "Ambrotype",
+      "description": "For playing: the Trip block's big buttons (Trip me, psychedelic colour, rainbow foil, pop duotone) on the left, with the Effects panel open on the right to tune them, and the colour mixer and grading wheels for more.",
+      "license": "CC0-1.0",
+      "path": "looks/layouts/trippy.json",
+      "sha256": "288076e9cf1fe84e7d614d7abb52e1536e51c0516372e11e8b630d28e5934676"
+    },
+    {
       "id": "layout-two-benches",
       "kind": "layout",
       "name": "Two benches",
