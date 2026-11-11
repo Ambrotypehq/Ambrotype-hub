@@ -192,6 +192,26 @@
       "sha256": "adc76bfd6bd594077f3db4ff3de997d97806d76e4c9c833d864bb35b6b6e060a"
     },
     {
+      "id": "theme-glass-dark",
+      "kind": "theme",
+      "name": "Glass Dark",
+      "author": "Ambrotype",
+      "description": "Smoked, see-through panels floating over a dim wash of colour, with rounded corners and soft shadows; the photo stays the brightest thing on screen. The blur needs a reasonably recent graphics driver to stay smooth.",
+      "license": "CC0-1.0",
+      "path": "looks/themes/glass-dark.json",
+      "sha256": "13a47d738b9f937286dd997e7134e2cfc567437ee911583c21d092ec5dd5f67d"
+    },
+    {
+      "id": "theme-glass-light",
+      "kind": "theme",
+      "name": "Glass Light",
+      "author": "Ambrotype",
+      "description": "Frosted, see-through panels floating over a soft wash of colour, with rounded corners and gentle shadows. Light and airy; the blur needs a reasonably recent graphics driver to stay smooth.",
+      "license": "CC0-1.0",
+      "path": "looks/themes/glass-light.json",
+      "sha256": "36b2b825c35e35e47af701390549de6ebf3b4880870a9b7a7fee646601d8b00c"
+    },
+    {
       "id": "theme-graphite",
       "kind": "theme",
       "name": "Graphite",
@@ -344,6 +364,17 @@
       "sha256": "99098876822040a12de076ab1072bf2c4ef3ef6bf1c2e4e31e5eb1adf0f6899a"
     },
     {
+      "id": "preset-blue-hour",
+      "kind": "preset",
+      "name": "Blue Hour",
+      "group": "Film & mood",
+      "author": "Ambrotype",
+      "description": "Cool evening blues with warm lights kept glowing.",
+      "license": "CC0-1.0",
+      "path": "presets/blue-hour.xmp",
+      "sha256": "45e2a6bb7e43c1a4e7b2b08e48709668f7c258721b1c5467afc151f6a3c63b62"
+    },
+    {
       "id": "preset-bw-classic",
       "kind": "preset",
       "name": "B&W Classic",
@@ -399,6 +430,17 @@
       "sha256": "40ebd119ed50bd084229fe9dd21655c11135930211df199aee0b98a7dea2eeaa"
     },
     {
+      "id": "preset-cinematic",
+      "kind": "preset",
+      "name": "Cinematic",
+      "group": "Film & mood",
+      "author": "Ambrotype",
+      "description": "Teal shadows, warm skin and a soft film curve, like a movie still.",
+      "license": "CC0-1.0",
+      "path": "presets/cinematic.xmp",
+      "sha256": "f66f835c7a7704fc37000dba511a1ce514319b00374dfb17e3b110332006da82"
+    },
+    {
       "id": "preset-clean-white",
       "kind": "preset",
       "name": "Clean White",
@@ -432,6 +474,17 @@
       "sha256": "13ab088e0ac16428a76ca6a9e8da35ff6aa05296905c8130302a1cf54fc2d37a"
     },
     {
+      "id": "preset-crisp-morning",
+      "kind": "preset",
+      "name": "Crisp Morning",
+      "group": "Everyday",
+      "author": "Ambrotype",
+      "description": "Clean, bright and a little cool, with clear detail.",
+      "license": "CC0-1.0",
+      "path": "presets/crisp-morning.xmp",
+      "sha256": "7e0c797a0d0d89916bf3840b4577fa27cca4400eeb7ab5dde090dab334b9b5f5"
+    },
+    {
       "id": "preset-cross-process",
       "kind": "preset",
       "name": "Cross-process",
@@ -452,6 +505,17 @@
       "license": "CC0-1.0",
       "path": "presets/dark-city.xmp",
       "sha256": "3dfbe0ec84ed7251b5a00771aaaccb54d1a9af36fb47d17937620cda86089b00"
+    },
+    {
+      "id": "preset-desert-dust",
+      "kind": "preset",
+      "name": "Desert Dust",
+      "group": "Film & mood",
+      "author": "Ambrotype",
+      "description": "Warm, dusty and faded, like sun-bleached prints.",
+      "license": "CC0-1.0",
+      "path": "presets/desert-dust.xmp",
+      "sha256": "25264c2e3d434a69f750d341079a74ab37a75f35c36a3083a1c91351c0133241"
     },
     {
       "id": "preset-dreamland",
@@ -531,6 +595,17 @@
       "sha256": "c9a77f446e92bbcc221a5bdffe88fe90abd73f64c9ff812babfb291227ad7b48"
     },
     {
+      "id": "preset-matte-portrait",
+      "kind": "preset",
+      "name": "Matte Portrait",
+      "group": "Everyday",
+      "author": "Ambrotype",
+      "description": "Soft skin, lifted blacks and gentle warmth for portraits.",
+      "license": "CC0-1.0",
+      "path": "presets/matte-portrait.xmp",
+      "sha256": "6f8f0ec0d3b80bdf452ba2619e686c9bffd72b6503fd4f64c1b2e94733064abf"
+    },
+    {
       "id": "preset-miniature",
       "kind": "preset",
       "name": "Miniature",
@@ -562,6 +637,17 @@
       "license": "CC0-1.0",
       "path": "presets/night-lights.xmp",
       "sha256": "6a23e84e66b884caa3555116b0087a5e4430965da51f2542b68c0627e02d39c5"
+    },
+    {
+      "id": "preset-noir",
+      "kind": "preset",
+      "name": "Noir",
+      "group": "Black & white",
+      "author": "Ambrotype",
+      "description": "Deep blacks and bright highlights, a hard-boiled black and white.",
+      "license": "CC0-1.0",
+      "path": "presets/noir.xmp",
+      "sha256": "c232cd5a6874f54ba483474a4bb88778663e92b028773bc1212bee15b469db5d"
     },
     {
       "id": "preset-oil-painting",
@@ -630,6 +716,17 @@
       "sha256": "5303403be77537df728da9700e4cacfbbbae2fea8572c6f2b74dba827b987af5"
     },
     {
+      "id": "preset-sunset-duotone",
+      "kind": "preset",
+      "name": "Sunset Duotone",
+      "group": "Wild",
+      "author": "Ambrotype",
+      "description": "Two inks, deep purple and gold, like a gig poster.",
+      "license": "CC0-1.0",
+      "path": "presets/sunset-duotone.xmp",
+      "sha256": "194ff25d31c79249a39ab250c72125edac8d46132c18093c3b793dc7ae01051a"
+    },
+    {
       "id": "preset-teal-orange",
       "kind": "preset",
       "name": "Teal & Orange",
@@ -650,6 +747,17 @@
       "license": "CC0-1.0",
       "path": "presets/toy-camera.xmp",
       "sha256": "296fe4e4fc74a800e872733342ec2750e8d165be28f0f426e8cb46b54df9f244"
+    },
+    {
+      "id": "preset-vaporwave",
+      "kind": "preset",
+      "name": "Vaporwave",
+      "group": "Wild",
+      "author": "Ambrotype",
+      "description": "Pink and cyan, soft and dreamy, straight from a retro screen.",
+      "license": "CC0-1.0",
+      "path": "presets/vaporwave.xmp",
+      "sha256": "20dd28151be0a3028bebfebaa66d19f2fffee96c837d9c8aa522c6123e3b619e"
     },
     {
       "id": "preset-vivid-travel",
